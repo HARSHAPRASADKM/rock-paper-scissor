@@ -1,0 +1,62 @@
+import random 
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+symbols=[rock,paper,scissors]
+user_input=int(input("welcome to rock,paper and scissor game "
+                 "enter 0 for rock , 1 for paper and 2 for scissors\n"))
+
+
+if user_input <=-1 or user_input >= 3:
+    print("you have entered the invalid option ")
+    exit()
+print(symbols[user_input])    
+computer_input=random.randint(0,2)
+print("the computer choice is ")
+print(symbols[computer_input])
+
+if user_input==0 and computer_input==2:
+    print("you win \n")
+elif computer_input==0 and user_input==2:
+    print("you loose\n")
+elif user_input==computer_input:
+    print("its a draw\n")
+    
+elif user_input==0 and computer_input==1:
+     print("you win\n")
+elif computer_input==0 and user_input==1:
+    print("you loose\n")
+elif user_input==1 and computer_input==2:
+    print("you loose\n")
+else :
+    print("you win\n")
+    
+    
+
+
+
+
